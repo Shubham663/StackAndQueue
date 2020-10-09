@@ -74,6 +74,15 @@ public class Queue{
 		queue.printList();
 	}
 	
+	/**
+	 * Removes the first element of the queue
+	 */
+	public<T> T deque() {
+		T data =  queue.pop();
+		first = queue.getHead();
+		return data;
+	}
+	
 	public static void main(String[] args) {
 		Queue queue = new Queue();
 		queue.push(10);
@@ -83,5 +92,7 @@ public class Queue{
 		queue.push(40);
 		queue.printQueue();
 		System.out.println("Data in the last node " + queue.last.getData());
+		System.out.println("The element being deque'd " + queue.deque());
+		queue.printQueue();
 	}
 }

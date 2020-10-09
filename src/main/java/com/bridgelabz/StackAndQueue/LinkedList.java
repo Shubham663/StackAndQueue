@@ -168,13 +168,16 @@ public class LinkedList{
 	/**
 	 * deletes the first node of the list
 	 */
-	public <T> void pop() {
+	public <T> T pop() {
 		if(head==null) {
-			System.out.println("The list is empty, no elements to remove");
+			System.out.println("The list is empty, no elements to remove. Returning null");
+			return null;
 		}
 		else {
+			Node n = head;
 			head = head.next;
 			size--;
+			return (T)n.data;
 		}
 	}
 	
