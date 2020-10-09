@@ -102,7 +102,7 @@ public class LinkedList{
 	 * @param <T>, generic type that linkedlist stores
 	 * @param data, the data tobe stored
 	 */
-	public <T extends Comparable<T>> void addNodeAtLast(T data) {
+	public <T extends Comparable<T>> Node addNodeAtLast(T data) {
 		Node n = new Node(data);
 		Node t = head;
 		if(t == null){
@@ -114,6 +114,7 @@ public class LinkedList{
 			t.next = n;
 		}
 		size++;
+		return n;
 	}
 	
 	/**
